@@ -1,0 +1,46 @@
+<% include ../admin/header %>
+
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        <li>
+            <a href="/test">管理页面</a>
+        </li>
+        <li class="active">修改管理员信息</li>
+    </ol>
+    <!-- 路径导航 END -->
+    <!-- 表单 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+
+                <form action="/test/adminUpdate" class="userForm" method="POST">
+                    <input type="hidden" value="<%=data._id%>" name="_id">
+                    <div class="input-group">
+                        <span class="input-group-addon">用户</span>
+                        <input type="text" class="form-control" name="username" value="<%=data.username%>">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon">密码</span>
+                        <input type="password" class="form-control" name="password" value="<%=data.password%>">
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">电话</span>
+                        <input type="text" class="form-control" name="tel" value="<%=data.tel%>">
+                    </div>
+
+                    <div class="input-group">
+                        <input type="submit" value="修改">
+                    </div>
+                </form>
+
+
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+
+    </div>
+    <!-- 表单 end -->
+
+<% include ../admin/footer %>

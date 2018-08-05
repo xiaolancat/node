@@ -1,0 +1,22 @@
+<% include ./header%>
+
+<div class="container">
+  <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading"></div>
+            <div class="panel-body">
+              
+                <% articlelist.forEach(function(val1){ %>
+                     <div class="col-md-12 articletitle"><%=val1.title%></div>
+                     <div class="col-md-12">
+                       <div class="col-md-3 articleauthor">作者：<%=val1.author%></div>
+                      </div>
+                      <div><%-val1.content%></div>
+                <% })%>
+            </div>
+          </div>          
+        </div>
+  </div>
+</div>
+<% include ./footer%>

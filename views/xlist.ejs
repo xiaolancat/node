@@ -1,0 +1,23 @@
+<% include ./header%>
+
+<div class="container">
+  <div class="row">
+      <%data.forEach(function(val2){ %>
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading"><%=val2.name%></div>
+            <div class="panel-body">
+              <ul>
+                <% articlelist.forEach(function(val1){ %>
+                     <div>
+                         <a href="/articlecontent/<%=val1._id%>"><%=val1.title%></a>
+                     </div>
+                <% })%>
+              </ul>
+            </div>
+          </div>          
+        </div>
+      <%})%>
+  </div>
+</div>
+<% include ./footer%>
